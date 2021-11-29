@@ -31,7 +31,7 @@ public class AllBooksActivity extends AppCompatActivity {
         // booksRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         booksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        booksAdapter.setBooks(Utils.getInstance().getAllBooks());
+        booksAdapter.setBooks(Utils.getInstance(this).getAllBooks());
     }
 
     /*

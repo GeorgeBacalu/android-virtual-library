@@ -80,7 +80,7 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
                         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if(Utils.getInstance().removeFromAlreadyRead(books.get(position))) {
+                                if(Utils.getInstance(context).removeFromAlreadyRead(books.get(position))) {
                                     Toast.makeText(context, "Book Removed", Toast.LENGTH_SHORT).show();
                                     notifyDataSetChanged();
                                 }
@@ -105,7 +105,7 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
                         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if(Utils.getInstance().removeFromWantToRead(books.get(position))) {
+                                if(Utils.getInstance(context).removeFromWantToRead(books.get(position))) {
                                     Toast.makeText(context, "Book Removed", Toast.LENGTH_SHORT).show();
                                     notifyDataSetChanged();
                                 }
@@ -130,7 +130,7 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
                         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if(Utils.getInstance().removeFromCurrentlyReading(books.get(position))) {
+                                if(Utils.getInstance(context).removeFromCurrentlyReading(books.get(position))) {
                                     Toast.makeText(context, "Book Removed", Toast.LENGTH_SHORT).show();
                                     notifyDataSetChanged();
                                 }
